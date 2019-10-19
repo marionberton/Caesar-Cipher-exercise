@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link>
+	<title>Caesar Cypher</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css" >
+	
+</head>
+<body>
+	<section>
+		
+			<div id="container">
+				<div id="title">
+					<h1>Caesar Cypher</h1>
+				</div>
+				<form id="form"> 
+						<p>First, type your text</p>
+						<input id="cypher" type="text" placeholder="Type text to cypher" name="inputtext">
+						<p>Second, choose the offset</p>
+						<div class="encrypt">
+						<input id="offset" type="number" min="1" max="26" value="3" name="offset"/>
+						<button id="button" type="submit" value="encrypt">Encrypt</button>
+						</div>
+						<p>Result</p>
+						<output id="result" type="text">
+				</form>
+			</div>
+	
+	</section>
+	
+	<script src="./scripts/caesar.js"></script>
+</body>
+</html>
+
+
