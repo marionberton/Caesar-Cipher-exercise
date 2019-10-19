@@ -38,6 +38,7 @@ body {
 		border: 3px solid #e2dfe1;
 		border-radius: 50px ;
 		margin: 0 20px;
+		outline: none;
 	}
 	
 	#result {
@@ -64,6 +65,7 @@ body {
 		color: rgb(155, 97, 237);
 		font-size: 18px;
 		font-weight: 700;
+		outline: none;
 	}
 	
 	button {
@@ -75,6 +77,7 @@ body {
 		width: 100px;
 		margin-right: 20px;
 		background-color: #f7f7f7;
+		outline: none;
 	}
 	.encrypt {
 		display: flex;
