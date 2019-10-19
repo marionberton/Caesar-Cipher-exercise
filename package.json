@@ -1,0 +1,35 @@
+{
+  "name": "jest-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marionberton/Caesar-Cipher-exercise.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "testing",
+    "jest",
+    "unit",
+    "tests",
+    "integration",
+    "tests",
+    "e2e",
+    "tests"
+  ],
+  "author": "\"Marion Berton\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marionberton/Caesar-Cipher-exercise/issues"
+  },
+  "homepage": "https://github.com/marionberton/Caesar-Cipher-exercise#readme",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "puppeteer": "^1.20.0"
+  }
+}
