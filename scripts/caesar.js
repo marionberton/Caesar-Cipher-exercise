@@ -5,16 +5,19 @@ const output = document.getElementById('result');
 //We need to use an event handler, once the button is clicked it give access to the text that was type.
 
 
-
-form.addEventListener ("submit", e => {
+if (form){
+  form.addEventListener ("submit", e => {
     e.preventDefault();//we dont want to submit the form
-    output.innerHTML = [... form.inputtext.value ]
-      .map(el => caesarCipher(el)).join('');
+    const offset = Number(form.offset.value);
+    output.innerHTML = textConvert(form.inputtext.value, offset);
   } //access the input message, turn the string into an array with spread operator (es6 js)
 );//map call function on each element in array and creates new array annd join to convert back into string.
+}
 
-
-
+const textConvert = (text, offset) => {
+  const result = [...text].map(el => caesarCipher(el, offset)).join('');
+  return result;
+}
 
 const alphabet = [
   'a','b','c','d','e','f',
@@ -24,16 +27,17 @@ const alphabet = [
   'y','z'
 ];
 
-const caesarCipher = (el) => {
-  const offset = Number(form.offset.value);
+const caesarCipher = (el, offset) => {
+
   if (alphabet.includes(el.toLowerCase())) { 
     const index = alphabet.indexOf(el.toLowerCase()); // insuring everything is lower case
     const newIndex = (index + offset) % 26; //the modulo gives us the remainder, so if it's over 25 it will loop back
-    return alphabet[newIndex] 
+    //console.log(alphabet[newIndex]);
+    return alphabet[newIndex];
   } else { 
-		return el 
+		return el;
 	} 
 };
-module.exports = {
-	form, output, caesarCipher, offset, index, newIndex, alphabet
-};
+
+
+module.exports = {caesarCipher, textConvert};
